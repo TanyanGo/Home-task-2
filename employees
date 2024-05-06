@@ -1,0 +1,24 @@
+CREATE TABLE Employees (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100),
+    department VARCHAR(100),
+    salary NUMERIC
+);
+INSERT INTO Employees (name, department, salary) VALUES ('John', 'IT', 6000);
+INSERT INTO Employees (name, department, salary) VALUES ('Jim', 'HR', 4000);
+INSERT INTO Employees (name, department, salary) VALUES ('Kate', 'Sales', 5000);
+INSERT INTO Employees (name, department, salary) VALUES ('Bob', 'Finance', 2000);
+INSERT INTO Employees (name, department, salary) VALUES ('Bill', 'Marketing', 3500);
+INSERT INTO Employees (name, department, salary) VALUES ('Ann', 'IT', 6500);
+INSERT INTO Employees (name, department, salary) VALUES ('Jack', 'Finance', 2500);
+INSERT INTO Employees (name, department, salary) VALUES ('April', 'Marketing', 9000);
+INSERT INTO Employees (name, department, salary) VALUES ('Ted', 'HR', 1000);
+INSERT INTO Employees (name, department, salary) VALUES ('Kim', 'Sales', 5000);
+INSERT INTO Employees (name, department, salary) VALUES ('Brad', 'IT', 6000);
+INSERT INTO Employees (name, department, salary) VALUES ('Sil', 'Finance', 4500);
+INSERT INTO Employees (name, department, salary) VALUES ('Sara', 'HR', 2500);
+SELECT name, department FROM Employees;
+SELECT name, salary FROM Employees WHERE salary>5000
+SELECT name, salary FROM Employees ORDER BY salary DESC
+SELECT  count (name), department FROM Employees GROUP BY department
+SELECT AVG (salary), department FROM Employees GROUP BY department
